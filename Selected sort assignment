@@ -1,0 +1,67 @@
+//10684687
+//SELECTION SORT
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Hello this program sorts a list of values you input in ascending order"<<endl;
+    cout<<"Kindly follow the instructions to get your list sorted"<<endl;
+    cout<<endl<<endl;
+    //Declaring variables
+    int n,t,m,l;
+    int i=0,j=0;
+
+    //Accepting list from user
+    cout<<"Kindly input the number of elements in the list"<<endl;
+    cin>>n;
+    int Arr[n];
+    for(i=0;i<n;i++)
+    {
+        cout<<"Input element "<<i+1<<" of the list"<<endl;
+        cin>>Arr[i];
+    }
+    //Display array elements
+    cout<<"These are the list of elements you inputted"<<endl;
+    for(i=0;i<n;i++)
+    {
+        cout<<Arr[i]<<" ";
+    }
+    cout<<endl;
+
+    //Codes for sorting the list
+
+    for(i=0;i<n-1;i++)
+    {
+        m=Arr[i];
+        l=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(m>Arr[j])
+            {
+                m=Arr[j];
+                l=j;
+            }
+        }
+
+        //Swapping
+
+        t=Arr[i];
+        Arr[i]=Arr[l];
+        Arr[l]=t;
+    }
+    cout<<endl;
+    //Displaying sorted array
+    cout<<"The sorted list is ";
+    for(i=0;i<n;i++)
+    {
+        cout<<Arr[i]<<" ";
+    }
+    cout<<endl;
+
+
+
+    return 0;
+}
+
